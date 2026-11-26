@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#231448">
+<meta name="description" content="Portafolio comercial digital de REHAVID: cápsulas, piezas gráficas, rutas NEXO, experiencias Positiva, herramientas y analítica. Explora demos y arma una propuesta en horas.">
+<title>REHAVID · Portafolio digital comercial</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+<header class="site-header">
+ <a class="brand" href="#inicio" aria-label="REHAVID, inicio"><img src="assets/logo-rehavid.png" alt="REHAVID"><span>PORTAFOLIO<br><b>DIGITAL</b></span></a>
+ <nav aria-label="Secciones del portafolio"><a href="#catalogo">Soluciones</a><a href="#muestras">Demos</a><a href="#positiva">Positiva</a><a href="#paquetes">Paquetes</a></nav>
+ <button class="btn btn-dark header-proposal" data-action="go-proposal"><span data-icon="briefcase"></span>Mi propuesta <span class="count" id="header-count">0</span></button>
+</header>
+<main>
+ <section id="inicio" class="hero">
+  <div class="hero-inner wrap">
+   <div class="hero-copy">
+    <div class="eyebrow light"><span class="tiny-line"></span>REHAVID · SOLUCIONES PARA ACTIVAR EL CUIDADO</div>
+    <h1>Lo que sabemos,<br>en experiencias<br><em>que conectan.</em></h1>
+    <p>Cápsulas, contenidos, rutas y herramientas para llevar la prevención a más personas. Explora lo que podemos adaptar y construye una propuesta con alcance y horas.</p>
+    <div class="hero-actions"><a class="btn btn-green" href="#catalogo">Explorar soluciones</a><button class="btn btn-glass" data-action="demo" data-id="video-portada"><span data-icon="play"></span>Ver presentación</button></div>
+    <div class="hero-facts"><span><b id="product-count">32</b> fichas comerciales</span><span><b>9</b> rutas NEXO</span><span><b>7</b> líneas de solución</span></div>
+   </div>
+   <div class="hero-composition" aria-label="Ejemplos de las experiencias digitales REHAVID">
+    <div class="composition-grid" aria-hidden="true"></div>
+    <div class="experience-window">
+     <div class="window-top"><span>REHAVID NEXO</span><span>EXPLORA · DECIDE · APRENDE</span></div>
+     <div class="window-title"><div><small>ERGONOMÍA INTERACTIVA</small><h2>Puesto a punto</h2></div><span class="round-icon" data-icon="spark"></span></div>
+     <img src="assets/nexo-ergonomics.webp" alt="Ilustración del módulo de ergonomía Puesto a punto" class="window-art">
+     <div class="window-bottom"><span>Una decisión a la vez.</span><button data-action="demo" data-id="nexo-ergonomics" aria-label="Abrir demo Puesto a punto"><span data-icon="play"></span></button></div>
+    </div>
+    <div class="floating-card orange-card"><span data-icon="heart"></span><div><small>DESARROLLOS POSITIVA</small><b>Bienestar que<br>se vive.</b></div></div>
+    <div class="floating-card hours-card"><span class="pill-circle" data-icon="clock"></span><div><b>Del interés al alcance.</b><small>Arma tu propuesta en horas.</small></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="personalize-strip wrap" aria-label="Personalización de la empresa">
+  <div class="personalize-title"><span data-icon="spark"></span><div><b>Hazlo parte de tu empresa</b><span>Marca propia en la experiencia y QR de participación al cierre.</span></div></div>
+  <div class="personalize-actions"><button class="btn btn-outline" data-action="upload-logo"><span data-icon="image"></span><span id="logo-label">Cargar logo empresa</span></button><button class="btn btn-outline" data-action="upload-qr"><span data-icon="qr"></span><span id="qr-label">Cargar QR de participación</span></button></div>
+  <input type="file" id="company-logo-file" accept="image/png,image/jpeg,image/webp" hidden><input type="file" id="company-qr-file" accept="image/png,image/jpeg,image/webp" hidden>
+ </section>
+
+ <section id="catalogo" class="section wrap catalog-section">
+  <div class="section-title"><div><div class="eyebrow">UNA NECESIDAD, DISTINTAS FORMAS DE RESOLVERLA</div><h2>Tu próxima propuesta<br>empieza aquí.</h2></div><p>Filtra por formato, revisa el alcance y agrega las soluciones que necesita tu cliente. Cada ficha separa el tiempo de aprendizaje de las horas de servicio.</p></div>
+  <div class="catalog-controls">
+   <label class="search-box"><span data-icon="search"></span><input id="catalog-search" type="search" placeholder="Busca un tema, producto o necesidad…" aria-label="Buscar soluciones"></label>
+   <label class="select-box"><span>Ordenar</span><select id="catalog-sort"><option value="featured">Destacados primero</option><option value="hours">Menor rango de horas</option><option value="name">Nombre A–Z</option></select></label>
+  </div>
+  <div id="category-tabs" class="category-tabs" role="group" aria-label="Filtrar por línea de solución"></div>
+  <div class="catalog-meta"><p id="catalog-status" role="status" aria-live="polite"></p><button class="text-btn" data-action="hours-guide"><span data-icon="info"></span>Cómo leer las horas</button></div>
+  <div id="catalog-grid" class="catalog-grid"></div>
+  <div class="show-more"><button class="btn btn-outline" id="show-more" data-action="show-more">Ver más soluciones</button></div>
+ </section>
+
+ <section id="muestras" class="showcase-section">
+  <div class="wrap">
+   <div class="section-title light-title"><div><div class="eyebrow light">VER PARA CONVERSAR MEJOR</div><h2>Una muestra vale<br>más que una descripción.</h2></div><p>Abre experiencias reales y ejemplos de formato. Úsalos para conversar con el cliente sobre su necesidad y el resultado esperado.</p></div>
+   <div class="showcase-grid">
+    <button class="showcase-card showcase-main" data-action="demo" data-id="video-positiva"><img src="assets/positiva-video.jpg" alt="Fotograma de la cápsula Respira de Positiva" loading="lazy"><div class="showcase-shade"></div><span class="play-badge" data-icon="play"></span><div class="showcase-caption"><small>CÁPSULA REAL · 2:07</small><h3>Respira, suelta y renueva tu energía.</h3><span>Microaprendizaje · Corazón Naranja</span></div></button>
+    <button class="showcase-card route-showcase" data-action="demo" data-id="ccl"><div class="mock-route"><i data-icon="users"></i><span>CONOCE</span><span>COMPRENDE</span><span>IDENTIFICA</span><span>ACTÚA</span><span>RESUELVE</span></div><div class="showcase-caption"><small>RUTA INTERACTIVA REAL</small><h3>Convivencia que se practica.</h3><span>Cinco misiones · Positiva CCL</span></div><span class="mini-play" data-icon="play"></span></button>
+    <button class="showcase-card analytics-showcase" data-action="demo" data-id="herramientas"><div class="mock-dashboard" aria-hidden="true"><div><b>Avance visible</b><span>Datos de ejemplo</span></div><div class="mock-bars"><i style="--height:42%"></i><i style="--height:66%"></i><i style="--height:55%"></i><i style="--height:88%"></i><i style="--height:74%"></i></div></div><div class="showcase-caption"><small>DEMOSTRACIÓN CON DATOS SIMULADOS</small><h3>Gestión que se entiende.</h3><span>Filtros, indicadores y acciones</span></div><span class="mini-play" data-icon="play"></span></button>
+   </div>
+   <div class="sample-links"><button data-action="demo" data-id="video-bioseguridad">Bioseguridad <span data-icon="play"></span></button><button data-action="demo" data-id="video-ergonomia">Ergonomía <span data-icon="play"></span></button><button data-action="demo" data-id="video-decision">Capacidad de decisión <span data-icon="play"></span></button><button data-action="demo" data-id="video-informacion">Información clara <span data-icon="play"></span></button><button data-action="demo" data-id="infografia">Ejemplo de infografía <span data-icon="image"></span></button></div>
+  </div>
+ </section>
+
+ <section id="positiva" class="section wrap positiva-section">
+  <div class="positiva-intro"><div class="eyebrow orange-text">EXPERIENCIAS Y PROPUESTAS DE REFERENCIA</div><h2>Lo aprendido con Positiva<br>también abre posibilidades.</h2><p>Convivencia, bienestar y participación en formatos que se pueden contextualizar. Cada referencia indica si hay una demo disponible o un alcance documentado.</p><img src="assets/logo-positiva.png" alt="Positiva" class="positiva-logo"></div>
+  <div class="positiva-picks">
+   <article><span class="tile-icon orange" data-icon="route"></span><div><small>DEMO DISPONIBLE</small><h3>Ruta CCL</h3><p>Cinco misiones, decisiones, evaluación y certificado de muestra.</p><button class="text-btn" data-action="detail" data-id="positiva-ccl">Ver alcance y horas</button></div></article>
+   <article><span class="tile-icon green" data-icon="heart"></span><div><small>DEMO DISPONIBLE</small><h3>Semáforo emocional</h3><p>Reconocer, pausar y construir un plan personal breve.</p><button class="text-btn" data-action="demo" data-id="semaforo">Explorar experiencia</button></div></article>
+   <article><span class="tile-icon purple" data-icon="book"></span><div><small>PROPUESTA DOCUMENTADA</small><h3>Cartilla PAP · Género</h3><p>Referencia de 85 horas para un desarrollo editorial especializado.</p><button class="text-btn" data-action="detail" data-id="positiva-pap">Consultar ficha</button></div></article>
+  </div>
+ </section>
+
+ <section id="paquetes" class="kits-section section">
+  <div class="wrap"><div class="section-title"><div><div class="eyebrow">COMBINA FORMATOS, CONECTA RESULTADOS</div><h2>Puntos de partida<br>para una buena oferta.</h2></div><p>Estas combinaciones suman las fichas seleccionadas. Puedes ajustar cantidades y horas después de conversar con el cliente.</p></div><div id="kits-grid" class="kits-grid"></div></div>
+ </section>
+
+ <section id="propuesta" class="section wrap proposal-section">
+  <div class="section-title"><div><div class="eyebrow">CONSTRUCTOR COMERCIAL</div><h2>Del catálogo<br>a una propuesta concreta.</h2></div><p>Define el cliente, combina productos y dimensiona las horas. El resumen lleva alcance, entregables y condiciones de la propuesta.</p></div>
+  <div class="proposal-layout">
+   <div class="proposal-main">
+    <div class="brief-form"><label>Empresa / cliente<input id="proposal-company" autocomplete="organization" placeholder="Escribe el nombre de la empresa" maxlength="100"></label><label>Necesidad principal<textarea id="proposal-brief" rows="2" maxlength="1000" placeholder="Ej. reforzar la cultura de convivencia en un equipo distribuido."></textarea></label></div>
+    <div class="proposal-list-heading"><h3>Soluciones seleccionadas</h3><button class="text-btn" data-action="clear-selection">Limpiar selección</button></div>
+    <div id="proposal-items"></div>
+    <p class="working-note"><span data-icon="info"></span>Las cantidades corresponden a piezas, módulos o proyectos. No al número de trabajadores. Las horas por unidad son editables.</p>
+   </div>
+   <aside class="proposal-summary" aria-label="Resumen de la propuesta">
+    <div class="summary-brand" id="summary-brand"><img src="assets/logo-rehavid.png" alt="REHAVID"></div>
+    <span class="eyebrow">DIMENSIONAMIENTO INICIAL</span><div class="total-hours"><b id="total-hours">0</b><span>horas de servicio</span></div>
+    <div class="summary-line"><span>Unidades de alcance</span><b id="total-quantity">0</b></div><div class="summary-line"><span>Rango de referencia</span><b id="total-range">0 h</b></div>
+    <p id="estimate-note">Selecciona productos para construir el alcance. Las horas requieren validación técnica y comercial.</p>
+    <button class="btn btn-green" data-action="download-proposal"><span data-icon="download"></span>Descargar propuesta</button><button class="btn btn-outline" data-action="copy-proposal"><span data-icon="copy"></span>Copiar resumen</button><button class="text-btn" data-action="print-proposal"><span data-icon="print"></span>Imprimir / guardar PDF</button>
+   </aside>
+  </div>
+  <div class="scope-note"><div><span data-icon="check"></span><h3>Una base clara para cotizar.</h3></div><p>Las bandas estimadas consideran una empresa, un idioma, insumos aprobados y una ronda de ajustes. Las fichas con referencias previas conservan el alcance de su propuesta original. Licencias, rodaje, viajes, operación periódica e integraciones se incluyen únicamente cuando la ficha los menciona.</p></div>
+  <div id="registration-area"></div>
+ </section>
+
+ <section class="section wrap method-section"><div class="method-title"><div class="eyebrow">ASÍ SE CONVIERTE EN UN PRODUCTO PARA TU CLIENTE</div><h2>Contexto. Contenido.<br>Experiencia. Entrega.</h2></div><div class="method-steps"><article><span data-icon="target"></span><h3>Definir</h3><p>Necesidad, audiencia, objetivo y evidencia esperada.</p></article><article><span data-icon="book"></span><h3>Adaptar</h3><p>Contenido validado, ejemplos, identidad y formato.</p></article><article><span data-icon="check"></span><h3>Probar</h3><p>Navegación, reproducción, preguntas y cierre.</p></article><article><span data-icon="package"></span><h3>Entregar</h3><p>Archivos, guía y alcance de actualización acordado.</p></article></div></section>
+ <footer class="site-footer wrap"><div><img src="assets/logo-rehavid.png" alt="REHAVID"><p>Conocimiento que se transforma<br>en cuidado y decisiones.</p></div><div><b>Portafolio comercial digital</b><span>Edición · 25 de noviembre de 2026</span><button class="text-btn" data-action="sources">Criterios y referencias del catálogo</button></div><a href="#inicio">Volver al inicio</a></footer>
+</main>
+<div class="selection-dock" id="selection-dock" hidden><span><b id="dock-count">0</b> soluciones · <strong id="dock-hours">0 h</strong></span><button class="btn btn-green" data-action="go-proposal">Ver propuesta</button></div>
+<dialog id="main-dialog" aria-label="Detalle del portafolio"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="catalog.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
